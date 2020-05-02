@@ -22,7 +22,7 @@ def valid?
       elsif @status == "complete" 
       puts "Transaction was already executed" 
       
-    else valid? == false 
+    else self.valid? == false 
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
     end
