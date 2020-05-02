@@ -26,7 +26,7 @@ def valid?
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
       
-    else @receiver.valid? == false
+    else valid? == false || @sender.balance < 0 
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
     end
